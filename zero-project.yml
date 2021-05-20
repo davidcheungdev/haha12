@@ -1,7 +1,7 @@
 # ------------------------
 # Fill in name of your App
 # this becomes the deployment and namespace name
-name: asdas_asda
+name: asdas_asdaa
 
 shouldPushRepositories: false
 
