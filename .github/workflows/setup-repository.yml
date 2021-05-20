@@ -34,7 +34,9 @@ jobs:
           # Generate a new personal access token with the workflow `scope` does the trick.
           # Checkout my blog post https://stefanbuck.com/blog for alternative options
           token: ${{ secrets.REPO_SETUP_TOKEN || secrets.GITHUB_TOKEN }}
-
+      - name: Check name is valid
+        run: |
+          cat zero-project.yml | grep -Eo "^name:(\s|\t)+(\w|\d|-)+"
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
