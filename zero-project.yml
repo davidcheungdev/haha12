@@ -1,0 +1,21 @@
+# ------------------------
+# Fill in name of your App
+# this becomes the deployment and namespace name
+name:
+
+shouldPushRepositories: false
+
+modules:
+  templates:
+    files:
+      dir: output
+      source: .
+    parameters:
+      # ------------------------
+      # DO NOT CHANGE
+      # should be fixed based on the AWS account youre using
+      ecrRepo: onboarding
+      domain: onboarding.dev
+      # ------------------------
+      # App settings
+      containerPort: 80
