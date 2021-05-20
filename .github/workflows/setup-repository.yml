@@ -34,9 +34,9 @@ jobs:
           # Generate a new personal access token with the workflow `scope` does the trick.
           # Checkout my blog post https://stefanbuck.com/blog for alternative options
           token: ${{ secrets.REPO_SETUP_TOKEN || secrets.GITHUB_TOKEN }}
-      - name: Check name is valid
+      - name: Check name is valid [lowercase alpha-numeric and dashes]
         run: |
-          cat zero-project.yml | grep -Eo "^name:(\s|\t)+(\w|\d|-)+"
+          cat zero-project.yml | grep -Eo "^name:(\s|\t)+([a-z]|\d|-)+$"
       - name: success
         run: |
           echo success && exit 1
