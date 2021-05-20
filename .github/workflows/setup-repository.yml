@@ -36,7 +36,7 @@ jobs:
           token: ${{ secrets.REPO_SETUP_TOKEN || secrets.GITHUB_TOKEN }}
       - name: Check name is valid [lowercase alpha-numeric and dashes]
         run: |
-          cat zero-project.yml | grep -Eo "^name:(\s|\t)+([a-z]|\d|-)+$" || echo "Invalid name [lowercase alpha-numeric and dashes] only" >&2
+          cat zero-project.yml | grep -Eo "^name:(\s|\t)+([a-z]|\d|-)+$" || echo "Invalid name [lowercase alpha-numeric and dashes] only" >&2; exit 1
       - name: success
         run: |
           echo success && exit 1
