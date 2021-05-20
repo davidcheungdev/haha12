@@ -37,6 +37,9 @@ jobs:
       - name: Check name is valid
         run: |
           cat zero-project.yml | grep -Eo "^name:(\s|\t)+(\w|\d|-)+"
+      - name: success
+        run: |
+          echo success && exit 1
       - uses: actions/setup-python@v2
         with:
           python-version: '3.x'
