@@ -6,4 +6,4 @@
 ## Credits
 - https://github.com/stefanbuck/cookiecutter-template
 
-[edit]: ./edit/master/zero-project.yml
+[edit]: ../../edit/master/zero-project.yml
